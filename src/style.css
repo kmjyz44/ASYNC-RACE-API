@@ -2,6 +2,25 @@
 body{
     background: url(./img/fon2.jpg) no-repeat 100% 100%  ; /* Параметры фона */    
 }
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1em;
+}
+button{
+    font-size: 8px;
+    height: 20px;
+    margin: 2px;
+
+}
+input[type=text]{
+    height:20px;
+ }
+ input[type=color]{
+    height:17px;
+ }
+
 .car_button_div{
   height: 70px;
   width: 99%;
