@@ -1,0 +1,42 @@
+
+body{
+    background: url(./img/fon2.jpg) no-repeat 100% 100%  ; /* Параметры фона */    
+}
+.car_button_div{
+  height: 70px;
+  width: 99%;
+    
+    border: rgb(249, 243, 247);
+    border-style: dashed;
+}
+li{
+    list-style-type: none;
+}
+.cars {
+    margin-top: 50px;
+}
+.cars li{
+    margin-top: 15px;
+}
+ .car_img{
+    
+    position: absolute;
+    height: 7%;
+    width: 7%;
+   
+    vertical-align: middle;
+    stroke: #e74b0e;
+    stroke-width: 2px;
+    fill: rgb(231, 28, 28);
+
+}
+.car_button_div .car_svg{
+    display: flex;
+    justify-content: space-between;
+}
+.car_button_div .car_svg .finish{
+    position: absolute;
+    right: 10%;
+    height: 4%;
+    width: 3%;
+}
