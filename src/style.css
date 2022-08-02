@@ -1,12 +1,13 @@
 
 body{
-    background: url(./img/fon2.jpg) no-repeat 100% 100%  ; /* Параметры фона */    
+    background: url(./img/fon2.jpg)  100% 100%  ; /* Параметры фона */    
 }
 h1{
     font-size: 2em;
 }
 h2{
     font-size: 1em;
+    color: rgb(211, 228, 243);
 }
 button{
     font-size: 8px;

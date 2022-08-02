@@ -11,7 +11,7 @@ function getcar(metod,url_car) {
     //var url_car = 'http://127.0.0.1:3000/garage/';
     request.open(metod, url_car);
     request.onload = function () {
-      console.log(request.response);
+      //console.log(request.response);
         request.response.forEach(element => {
             out+= ('<li>'+'<div class="menu_car" style="display: flex;">'+
             '<button class = "select" data = '+element.id+'>'+"SELECT"+'</button>'+
