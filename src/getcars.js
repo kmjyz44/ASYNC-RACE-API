@@ -2,14 +2,14 @@
 
 let ul_cars = document.querySelector('.ul_cars');
 
-function getcar(metod,url_car) {
+function getcar() {
     let out ='';
     var request = new XMLHttpRequest();
     
     request.responseType = 'json';
   
-    //var url_car = 'http://127.0.0.1:3000/garage/';
-    request.open(metod, url_car);
+    var url_car = 'http://127.0.0.1:3000/garage/';
+    request.open("GET", url_car);
     request.onload = function () {
       //console.log(request.response);
         request.response.forEach(element => {

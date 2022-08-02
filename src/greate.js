@@ -12,11 +12,10 @@ function greatecar (){
     let body = {
         "name": greate_name.value,
       "color": greate_color.value,
-      
     };
     
     request.send(JSON.stringify(body));
-    getcar("GET",'http://127.0.0.1:3000/garage/');
+    getcar();
     greate_name.value = null;
 }
 export { greatecar };
