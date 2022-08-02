@@ -1,5 +1,6 @@
 "use strict";
-import { greatecar } from "./greate";
+import { greatecar } from "./greate.js";
 import { getcar } from "./getcars.js";
- getcar();
- greatecar()
+
+ greatecar();
+ getcar("GET",'http://127.0.0.1:3000/garage/');

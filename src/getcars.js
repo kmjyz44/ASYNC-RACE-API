@@ -2,13 +2,16 @@
 
 let ul_cars = document.querySelector('.ul_cars');
 
-function getcar() {
+function getcar(metod,url_car) {
     let out ='';
     var request = new XMLHttpRequest();
+    
     request.responseType = 'json';
-    var url_car = 'http://127.0.0.1:3000/garage/';
-    request.open('GET', url_car);
+  
+    //var url_car = 'http://127.0.0.1:3000/garage/';
+    request.open(metod, url_car);
     request.onload = function () {
+      console.log(request.response);
         request.response.forEach(element => {
             out+= ('<li>'+'<div class="menu_car" style="display: flex;">'+
             '<button class = "select" data = '+element.id+'>'+"SELECT"+'</button>'+
@@ -33,7 +36,7 @@ function getcar() {
     '</li>';
 
         ul_cars.innerHTML=out;
-        });;
+        });
     };
     request.send();
 }
