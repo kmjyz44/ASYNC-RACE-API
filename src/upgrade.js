@@ -3,7 +3,7 @@ import { getcar } from "./getcars.js";
 let upgrate_name = document.querySelector('.upgrate_name');
 let upgrate_color = document.querySelector('.upgrate_color');
 let n;
-async function upgrade_cars(){
+function upgrade_cars(){
     let button_active = document.querySelector('.button_active');
     if(button_active !==null){
     //console.log(button_active);
