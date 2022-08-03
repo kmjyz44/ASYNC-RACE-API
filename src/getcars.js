@@ -13,9 +13,9 @@ function getcar() {
     request.onload = function () {
       //console.log(request.response);
         request.response.forEach(element => {
-            out+= ('<li>'+'<div class="menu_car" style="display: flex;">'+
+            out+= ('<li class = "li_cars">'+'<div class="menu_car" style="display: flex;">'+
             '<button class = "select_car_btn" data = '+element.id+'>'+"SELECT"+'</button>'+
-          '<button class ="remove" data = '+element.id+'>'+"REMOVE"+'</button>'+
+          '<button class ="remove_car_btn" data = '+element.id+'>'+"REMOVE"+'</button>'+
           '<h2>'+element.name+'</h2>'+
         '</div>')+
         '<div class="car_button_div">'+
