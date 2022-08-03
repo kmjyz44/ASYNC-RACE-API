@@ -14,8 +14,8 @@ function getcar() {
       //console.log(request.response);
         request.response.forEach(element => {
             out+= ('<li>'+'<div class="menu_car" style="display: flex;">'+
-            '<button class = "select" data = '+element.id+'>'+"SELECT"+'</button>'+
-          '<button>'+"REMOVE"+'</button>'+
+            '<button class = "select_car_btn" data = '+element.id+'>'+"SELECT"+'</button>'+
+          '<button class ="remove" data = '+element.id+'>'+"REMOVE"+'</button>'+
           '<h2>'+element.name+'</h2>'+
         '</div>')+
         '<div class="car_button_div">'+
