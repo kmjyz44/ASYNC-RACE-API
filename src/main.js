@@ -24,7 +24,7 @@ generate_car_btn.addEventListener('click',generate);
 //race_btn.addEventListener('click',race_a(rrr()));
  
 async function rrr (){ 
-    getcar();
+    await getcar();
     let race_btn = document.querySelector('.race_btn');
     race_btn.onclick=function(){
         let cars_img  = document.querySelectorAll('.car_img');
@@ -33,7 +33,8 @@ async function rrr (){
    };
   
 }
- 
+let reset = document.querySelector('.reset');
+ reset.addEventListener('click',getcar);
  //-----------//
  function next(){
  next_btn.addEventListener('click', function () {

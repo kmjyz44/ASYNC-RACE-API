@@ -21,7 +21,7 @@ async function generate (){
       }
       function getRandomName(){
         let myArray = [
-            "Газель","VAZ 2108","VAZ 2112","VAZ 2115","VAZ 2114","VAZ NIVA (4*4)","LADA Granta","LADA Kalina","LADA PRIORA sedan","LADA LARGUS" ,"Volga Siber", "Acura", "Audi A3 (8P)",	 	 	 	 	 
+            "VAZ 2108","VAZ 2112","VAZ 2115","VAZ 2114","VAZ NIVA","LADA Granta","LADA Kalina","LADA PRIORA sedan","LADA LARGUS" ,"Volga Siber", "Acura", "Audi A3",	 	 	 	 	 
             "Audi A4 B5",	 	 
             "Audi A4 B6",	 	 	 
             "Audi A4 B8" ,	 	 
@@ -30,8 +30,8 @@ async function generate (){
             "Audi Q3",
             "Audi Q5",
             "Audi Q7",
-            "Audi 80 B3-B4",	 	 	 
-            "Audi 100 / А6" ,	 	 	 
+            "Audi 80",	 	 	 
+            "Audi 100 " ,	 	 	 
             "Bentley Continenta",	 	 
             "BMW 7 F01",	 	 	 
             "BMW 5 GT F07",
@@ -44,10 +44,10 @@ async function generate (){
             "Chevrolet Aveo T300",
             "Chevrolet Captiva",
             "Chevrolet Cruze" ,	 	 	 	 
-            "Chery CrossEastar (B14)",
+            "Chery CrossEastar",
             "Citroen Berlingo",	 	 
             "Citroen C5", 	 	 	 	 	 
-            "Chrysler Neon 2",	 	 	 
+            "Chrysler Neon",	 	 	 
             "Chrysler Grand Voyager" ,	 	 	 
             "Daewoo Matiz",	 	 	 	 	 	 
             "Dodge Grand Caravan" ,	 	 	 	 	 	 
