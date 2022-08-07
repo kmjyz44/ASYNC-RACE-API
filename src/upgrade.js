@@ -4,8 +4,14 @@ let upgrate_name = document.querySelector('.upgrate_name');
 let upgrate_color = document.querySelector('.upgrate_color');
 let n;
 function upgrade_cars(){
+
     let button_active = document.querySelector('.button_active');
+    if(upgrate_name.value  == '' ){
+        alert('Имя машины не может быть пустым');
+      }
+      else{
     if(button_active !==null){
+        
     //console.log(button_active);
     n = (button_active.getAttribute('data'));
     var request = new XMLHttpRequest();
@@ -21,6 +27,7 @@ function upgrade_cars(){
      request.send(JSON.stringify(body));
     getcar();
   
+}
 }
 }
 export { upgrade_cars }

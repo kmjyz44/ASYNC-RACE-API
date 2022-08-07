@@ -8,24 +8,38 @@ import {race_a } from "./race.js";
 import {race_b } from "./race_b.js";
 
 let n = 0; 
-
-let b_start = document.querySelectorAll('.b');
-let car_button_div = document.querySelector('.car_button_div');
+let  num_page_end = document.querySelector('.num_page_end');
 let num_page = document.querySelector('.num_page');
 let prew_btn = document.querySelector('.prew_btn');
 let next_btn = document.querySelector('.next_btn');
 let generate_car_btn = document.querySelector('.generate_car_btn');
 let ul_cars = document.querySelector('.ul_cars');
 let greate_car = document.querySelector('.greate_car');
+let upgrate_car = document.querySelector('.upgrate_car');
+
+
+
 greate_car.addEventListener('click',greatecar);
 generate_car_btn.addEventListener('click',generate);
-let upgrate_car = document.querySelector('.upgrate_car');
+//race_btn.addEventListener('click',race_a(rrr()));
+ 
+async function rrr (){ 
+    getcar();
+    let race_btn = document.querySelector('.race_btn');
+    race_btn.onclick=function(){
+        let cars_img  = document.querySelectorAll('.car_img');
+  
+     cars_img.forEach(element => (race_a(element.classList[1])));
+   };
+  
+}
  
  //-----------//
  function next(){
  next_btn.addEventListener('click', function () {
     n =1+n;
     num_page.innerHTML = n;
+    num_page_end.innerHTML=n;
     getcar(n);
  });
 }
@@ -35,6 +49,7 @@ function prew(){
    if (n > 1 ){
     n = n-1;
     num_page.innerHTML = n;
+    num_page_end.innerHTML=n;
     getcar(n);
    }
  });
@@ -90,7 +105,6 @@ await getcar();
 await next();
 await prew();
 await sel ();
-await a_race();
-//await b_race()
+await rrr();
 }
 run ();
