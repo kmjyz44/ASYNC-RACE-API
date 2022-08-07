@@ -1,6 +1,6 @@
 
-export function race_a(){
-let car_img  = document.querySelector('.car_img');
+export function race_a(atr){
+let car_img  = document.querySelector('.'+atr+'');
 
 let start = Date.now(); // запомнить время начала
 let timer = setInterval(function() {

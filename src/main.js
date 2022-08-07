@@ -45,8 +45,7 @@ function a_race(){
     window.onload = function(){
     let a_start = document.querySelectorAll('.a_start'); 
     a_start.forEach(element => element.onclick = function (){
-        console.log(a_start)
-        race_a()
+        race_a(element.getAttribute('data'))
     })
     
     }
