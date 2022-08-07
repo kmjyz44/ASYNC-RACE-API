@@ -1,26 +1,26 @@
 "use strict";
-let next = document.querySelector('.next');
+
 let ul_cars = document.querySelector('.ul_cars');
 let garage_count = document.querySelector('.garage_count');
-function getcar(n) {
+
+async function getcar(n=1) {
     let out ='';
     var request = new XMLHttpRequest();
-    
     request.responseType = 'json';
   
     var url_car = 'http://127.0.0.1:3000/garage/?_page='+n+'';//====//
     request.open("GET", url_car);
-    request.onload = function () {
+     request.onload =  function () {
       //console.log(request.response);
-        request.response.forEach(element => {
+       request.response.forEach(element => {
             out+= ('<li class = "li_cars">'+'<div class="menu_car" style="display: flex;">'+
             '<button class = "select_car_btn" data = '+element.id+'>'+"SELECT"+'</button>'+
           '<button class ="remove_car_btn" data = '+element.id+'>'+"REMOVE"+'</button>'+
           '<h2>'+element.name+'</h2>'+
         '</div>')+
         '<div class="car_button_div">'+
-    '<button class = "a" data = '+element.id+'>'+"A"+'</button>'+
-    '<button class="b" data = '+element.id+'>'+"B"+'</button>'+
+    '<button class = "a_start" data = '+element.id+'>'+"A"+'</button>'+
+    '<button class="b_start" data = '+element.id+'>'+"B"+'</button>'+
     '<div class="car_svg">'+
       
     '<svg class="car_img "  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511 511" style="fill: '+element.color+'; enable-background:new 0 0 511 511;  xml:space="preserve";">'+
@@ -35,12 +35,13 @@ function getcar(n) {
   '</div>'+
     '</li>';
 
-        ul_cars.innerHTML=out;
+         ul_cars.innerHTML=out;
         garage_count.innerHTML = element.id; 
-        });
-    };
-    request.send();
-}
 
+        });
+        
+    };
+     request.send();
+}
 
 export { getcar };

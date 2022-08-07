@@ -1,6 +1,7 @@
 
-export function race_a() {window.onload  = function  () {
+export function race_a(){
 let car_img  = document.querySelector('.car_img');
+
 let start = Date.now(); // запомнить время начала
 let timer = setInterval(function() {
   // сколько времени прошло с начала анимации?
@@ -22,7 +23,7 @@ function draw(timePassed) {
     car_img.style.left = timePassed / 1.5 + 'px';
 }
 }
-}
+
 // for(let buttons_rem of remove_car_btn){
 //     if(buttons_rem.classLis=  window.onloadt.contains('button_active')){
 //       let n =  document.querySelector('.button_active').getAttribute('data');

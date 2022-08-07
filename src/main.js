@@ -7,9 +7,9 @@ import {generate } from "./generate_cars.js";
 import {race_a } from "./race.js";
 
 
-let n = 1;
+let n = 0; 
 
-let b = document.querySelectorAll('.b');
+let b_start = document.querySelectorAll('.b');
 let car_button_div = document.querySelector('.car_button_div');
 let num_page = document.querySelector('.num_page');
 let prew_btn = document.querySelector('.prew_btn');
@@ -40,7 +40,18 @@ function prew(){
  });
 }
 
-
+function a_race(){
+    getcar(n);
+    window.onload = function(){
+    let a_start = document.querySelectorAll('.a_start'); 
+    a_start.forEach(element => element.onclick = function (){
+        console.log(a_start)
+        race_a()
+    })
+    
+    }
+    
+}
  //---------------//
 function sel (){
  ul_cars.onclick = function(event){  
@@ -66,11 +77,6 @@ function sel (){
 }
 
 
-function a_race(){
-let a = document.querySelector('.a'); 
-a.addEventListener('click',race_a) ;
-console.log(a)
-}
 
 async function run (){
 await getcar();
