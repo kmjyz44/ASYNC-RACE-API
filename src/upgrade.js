@@ -17,7 +17,7 @@ function upgrade_cars(){
     var request = new XMLHttpRequest();
     let url_car = 'http://127.0.0.1:3000/garage/'+n+'';
     request.responseType = 'json';
-    request.open("PUT", url_car);
+     request.open("PUT", url_car);
     request.setRequestHeader('Content-Type', 'application/json' )
     let body = {
         "name": upgrate_name.value,

@@ -12,12 +12,13 @@ let timer = await setInterval(function() {
   }
   // отрисовать анимацию на момент timePassed, прошедший с начала анимации
   draw(timePassed);
-}, 20);
+}, (Math.random() * (1 - 70) + 120)
+);
 return timer;
 // в то время как timePassed идёт от 0 до 2000
 // left изменяет значение от 0px до 400px
  function draw(timePassed) {
-    car_img.style.left = timePassed / 1.5 + 'px';
+    car_img.style.left = timePassed / 1.6 + 'px';
 }
 
 }

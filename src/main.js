@@ -30,6 +30,7 @@ async function rrr (){
         let cars_img  = document.querySelectorAll('.car_img');
   
      cars_img.forEach(element => (race_a(element.classList[1])));
+  
    };
   
 }

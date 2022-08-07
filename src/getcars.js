@@ -9,7 +9,7 @@ async function getcar(n=1) {
     request.responseType = 'json';
   
     var url_car = 'http://127.0.0.1:3000/garage/?_page='+n+'';//====//
-    request.open("GET", url_car);
+     request.open("GET", url_car);
      request.onload =  function () {
       //console.log(request.response);
         request.response.forEach(element => {
