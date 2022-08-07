@@ -43,7 +43,7 @@
         <li class="nav-item" style="margin-top:3px;">
           <button>RACE</button>
           <button>RESET</button>
-          <button>GENERATE CARS</button>
+          <button class = 'generate_car_btn'>GENERATE CARS</button>
        </li>
      </ul>
   </nav>
@@ -52,16 +52,17 @@
 <div class="container-fluid" style="margin-left: 20px; margin-top: 30px;">
   <div class="Gar" style="display:flex ;">
   <h1 >Garage_ </h1> 
-  <h1>1</h1> 
+  <h1 class = "garage_count">1</h1> 
 </div>
   <div class="page" style="display:flex ;">
   <h2>page #_ </h2>
-  <h2>2</h2>
+  <h2 class="num_page">1</h2>
 </div>
 </div>
 </div>
 <div class="cars">
   <ul class="ul_cars">
+    
     <!-- <li>
       <div class="menu_car" style="display: flex;">
       <button>SELECT</button>
@@ -108,7 +109,15 @@
     </li> -->
   </ul>
 </div>
-
+<div class="row" style="margin-top: 40px;margin-bottom: 40px; margin-left: 50%;">
+<div class="col-md-1">
+  <button class="prew_btn">PREW</button>
+</div>
+<div class="col-md-3">
+  <button class = "next_btn">NEXT</button>
+</div>
+</div>
+</div>
 
 <script type="module" src="./main.js"></script>
 </body>

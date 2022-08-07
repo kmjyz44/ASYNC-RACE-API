@@ -3,6 +3,7 @@ import { getcar } from "./getcars.js";
 let greate_car = document.querySelector('.greate_car');
 let greate_name = document.querySelector('.greate_name');
 let greate_color = document.querySelector('.greate_color');
+
 function greatecar (){
     var request = new XMLHttpRequest();
     let url_car = 'http://127.0.0.1:3000/garage/';
