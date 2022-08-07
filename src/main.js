@@ -5,7 +5,7 @@ import { upgrade_cars } from "./upgrade.js";
 import {remove_cars} from "./remove_cars.js";
 import {generate } from "./generate_cars.js";
 import {race_a } from "./race.js";
-
+import {race_b } from "./race_b.js";
 
 let n = 0; 
 
@@ -40,17 +40,6 @@ function prew(){
  });
 }
 
-function a_race(){
-    getcar(n);
-    window.onload = function(){
-    let a_start = document.querySelectorAll('.a_start'); 
-    a_start.forEach(element => element.onclick = function (){
-        race_a(element.getAttribute('data'))
-    })
-    
-    }
-    
-}
  //---------------//
 function sel (){
  ul_cars.onclick = function(event){  
@@ -70,9 +59,28 @@ function sel (){
         }
         buttons_rem.classList.remove('button_active');
      }
+//----------------------------//
 
   upgrate_car.addEventListener('click',upgrade_cars) ;
- }
+
+
+  //------------------//
+  let b_start = document.querySelectorAll('.b_start'); 
+  for(let buttons of b_start){
+    if(buttons.classList.contains('button_active')){
+        race_b(buttons.getAttribute('data'))
+      }
+      buttons.classList.remove('button_active');
+   }
+   //_______________//
+   let a_start = document.querySelectorAll('.a_start');
+   for(let buttons of a_start){
+    if(buttons.classList.contains('button_active')){
+        race_a(buttons.getAttribute('data'))
+      }
+      buttons.classList.remove('button_active');
+   }
+}
 }
 
 
@@ -83,5 +91,6 @@ await next();
 await prew();
 await sel ();
 await a_race();
+//await b_race()
 }
 run ();
