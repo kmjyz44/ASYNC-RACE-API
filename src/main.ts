@@ -70,9 +70,8 @@ function sel (){
    
 const arrElem = Array.prototype.slice.call(select_car_btn, 0);
 for(let i =0; i<arrElem.length;i++){
-arrElem[i].classList.add('button_active')
+arrElem[i].classList.remove('button_active')
 }
-
     const even = event.target as HTMLButtonElement
     if(even.getAttribute("data")!==null){
       even.classList.toggle('button_active');

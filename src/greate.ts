@@ -5,7 +5,8 @@ let greate_name = document.querySelector('.greate_name') as HTMLInputElement;
 let greate_color = document.querySelector('.greate_color') as HTMLInputElement;
 
 function greatecar (){
-  if(greate_name.value   == '' ){
+  
+  if(greate_name.value   === '' ){
     alert('Имя машины не может быть пустым');
   }
   else{
