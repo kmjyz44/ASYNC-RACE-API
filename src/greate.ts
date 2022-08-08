@@ -1,11 +1,11 @@
 "use strict";
-import { getcar } from "./getcars.js";
-let greate_car = document.querySelector('.greate_car');
-let greate_name = document.querySelector('.greate_name');
-let greate_color = document.querySelector('.greate_color');
+import { getcar } from "./getcars";
+;
+let greate_name = document.querySelector('.greate_name') as HTMLInputElement;
+let greate_color = document.querySelector('.greate_color') as HTMLInputElement;
 
 function greatecar (){
-  if(greate_name.value  == '' ){
+  if(greate_name.value   == '' ){
     alert('Имя машины не может быть пустым');
   }
   else{
@@ -21,7 +21,7 @@ function greatecar (){
     
     request.send(JSON.stringify(body));
     getcar();
-    greate_name.value = null;
+    greate_name.value = "";
 }
 }
 export { greatecar };

@@ -1,7 +1,7 @@
-import { getcar } from "./getcars.js";
+import { getcar } from "./getcars";
 
-let upgrate_name = document.querySelector('.upgrate_name');
-let upgrate_color = document.querySelector('.upgrate_color');
+let upgrate_name = document.querySelector('.upgrate_name') as HTMLInputElement;
+let upgrate_color = document.querySelector('.upgrate_color') as HTMLInputElement;
 let n;
 function upgrade_cars(){
 

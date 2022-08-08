@@ -10,10 +10,15 @@
   "author": "L.Zhovtiak",
   "license": "MIT",
   "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
     "json-server": "^0.16.3",
+    "mini-css-extract-plugin": "^2.6.1",
+    "ts-loader": "^9.3.1",
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "autoprefixer": "10.4.5",
     "bootstrap": "^5.2.0",
     "webpack": "^5.74.0"
   }

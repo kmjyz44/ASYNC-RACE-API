@@ -1,6 +1,6 @@
 "use strict";
-import { getcar } from "./getcars.js";
-function remove_cars (n){
+import { getcar } from "./getcars";
+function remove_cars (n:string | null){
     // let button_active = document.querySelector('.button_active');
     // n = (button_active.getAttribute('data'));
     var request = new XMLHttpRequest();

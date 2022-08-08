@@ -1,9 +1,9 @@
 "use strict";
 
-let ul_cars = document.querySelector('.ul_cars');
-let garage_count = document.querySelector('.garage_count');
+let ul_cars = document.querySelector('.ul_cars') as HTMLElement;
+let garage_count = document.querySelector('.garage_count') as HTMLElement;
 
-async function getcar(n=1) {
+async function getcar(n:number=1) {
     let out ='';
     var request = new XMLHttpRequest();
     request.responseType = 'json';
@@ -12,7 +12,7 @@ async function getcar(n=1) {
      request.open("GET", url_car);
      request.onload =  function () {
       //console.log(request.response);
-        request.response.forEach(element => {
+        request.response.forEach((element: { id: string; name: string; color: string; }) => {
             out+= ('<li class = "li_cars">'+'<div class="menu_car" style="display: flex;">'+
             '<button class = "select_car_btn" data = '+element.id+'>'+"SELECT"+'</button>'+
           '<button class ="remove_car_btn" data = '+element.id+'>'+"REMOVE"+'</button>'+
