@@ -6,7 +6,7 @@ import {remove_cars} from "./remove_cars";
 import {generate } from "./generate_cars";
 import {race_a } from "./race";
 import {race_b } from "./race_b";
-
+import {winner} from "./winner";
 let n:number = 0; 
 let  num_page_end = document.querySelector('.num_page_end') as HTMLTitleElement;
 let num_page = document.querySelector('.num_page') as HTMLTitleElement;
@@ -139,5 +139,6 @@ await next();
 await prew();
 await sel ();
 await rrr();
+await winner();
 }
 run ()
